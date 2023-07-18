@@ -38,7 +38,6 @@ Vagrant.configure("2") do |config|
    end
    end
 
-
 ### Setup Nginx Virtual Machine ###
   config.vm.define "web01" do |web01|
     web01.vm.box = "ubuntu/xenial64"
