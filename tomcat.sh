@@ -7,7 +7,7 @@ TOMURL="https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomca
 TOMDIR=""
 
 # Install Java, Git, Maven, and Wget
-yum install -y java-1.8.0-openjdk git maven wget
+sudo yum install -y java-1.8.0-openjdk git maven wget
 
 # Download and extract Tomcat
 cd /tmp/
@@ -17,9 +17,9 @@ tar xzvf tomcatbin.tar.gz
 rm -f tomcatbin.tar.gz
 
 # Create Tomcat user and set ownership
-useradd --system --shell /sbin/nologin tomcat
+sudo useradd --system --shell /sbin/nologin tomcat
 rsync -avzh "/tmp/$TOMDIR/" /usr/local/tomcat8/
-chown -R tomcat:tomcat /usr/local/tomcat8
+sudo chown -R tomcat:tomcat /usr/local/tomcat8
 
 # Configure systemd service for Tomcat
 cat <<EOT > /etc/systemd/system/tomcat.service
@@ -45,6 +45,6 @@ WantedBy=multi-user.target
 EOT
 
 # Reload systemd configuration and start Tomcat service
-systemctl daemon-reload
-systemctl enable tomcat
-systemctl start tomcat
+sudo systemctl daemon-reload
+sudo systemctl enable tomcat
+sudo systemctl start tomcat
