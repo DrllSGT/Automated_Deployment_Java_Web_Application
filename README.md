@@ -15,4 +15,4 @@ Setting up as social networking web application written in Java to create this s
 - VirtualBox
 - Git Bash
 <br>
-![image](https://github.com/DrllSGT/Automated_Deployment_Java_Web_Application/assets/52445175/75c3f97a-6d9d-473a-9d52-9ed7d3be871a)
+ <img src="https://github.com/DrllSGT/Automated_Deployment_Java_Web_Application/assets/52445175/75c3f97a-6d9d-473a-9d52-9ed7d3be871a" width=900>
